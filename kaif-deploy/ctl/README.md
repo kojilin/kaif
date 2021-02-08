@@ -33,7 +33,7 @@ docker exec -it kaif_ctl zsh
 * use kube proxy via docker
 
 ```
-kubectl proxy --address='0.0.0.0' 
+kubectl proxy --address='0.0.0.0' --port=8009 
 ```
 
 now you can open browser to view k8s api server `http://127.0.0.1:8009/`

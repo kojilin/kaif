@@ -48,8 +48,7 @@ then
     -v "$kaif_deploy_dir/ctl/secret/kube_config_prod":/root/.kube/config-prod \
     -v "$kaif_deploy_dir/ctl/secret/zsh_history":/root/.zsh_history \
     -v "$kaif_deploy_dir/ctl/secret/gcloud":/root/.config/gcloud \
-    --add-host="$kaif_local" \
-    "$docker_host_mapping" \
+    --add-host="host.docker.internal:host-gateway" \
     -p 8009:8009 \
     --name kaif_ctl \
     -d \
